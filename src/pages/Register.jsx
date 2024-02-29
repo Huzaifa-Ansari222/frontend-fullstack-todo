@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState,useContext } from 'react'
+import { Link, Navigate } from 'react-router-dom'
 import axios from 'axios';
-import { server } from '../main';
+import { Context, server } from '../main';
 import toast from 'react-hot-toast';
 
 const Register = () => {
@@ -9,6 +9,8 @@ const Register = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const {isAuthenticated,setIsAuthenticated} = useContext(Context);
+
 
 
     const submitHandler = async(e) =>{
@@ -20,24 +22,26 @@ const Register = () => {
         {
             name,
             email,
-            password//pass user input to backend
+            password,//pass user input to backend
         },
         {
-            header:{
-                "Content-Type":"application/json" //by default
+            headers:{
+                "Content-Type": "application/json", //by default
             },
-            withCredentials: true ,// for cookie
+            withCredentials: true, // for cookie
         }
         );
         toast.success(data.message)//messg from backend
-
+        setIsAuthenticated(true);
         }catch(error){
-            toast.error("Some error")//messg from backend
-            console.log(error);
+            toast.error(error.response.data.message)//messg from backend
+            console.log("catch",error);
+            setIsAuthenticated(false);
+
         }
-        
     };
 
+    if(isAuthenticated) return <Navigate to={'/'}/>
 return (
     <div className='login'>
         <section>
