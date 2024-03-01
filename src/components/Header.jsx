@@ -18,11 +18,12 @@ const Header = () => {
     });
     toast.success("Logout Successfully")//messg from backend
     setIsAuthenticated(false);
-    setLoading(true);
+    setLoading(false);
 
     }catch(error){
         toast.error(error.response.data.message)//messg from backend
-        setIsAuthenticated(true);
+        setIsAuthenticated(false);// true on vid
+        setLoading(false);
     }
 };
 
@@ -35,8 +36,11 @@ const Header = () => {
             <Link to={'/'}>Home</Link>
             <Link to={'/profile'}>Profile</Link> 
             {
-              isAuthenticated ? <button disabled={loading} onClick={logoutHandler} className='btn'>Logout</button>
-              : <Link to={'/login'}>Login</Link>
+              isAuthenticated ? ( <button disabled={loading} onClick={logoutHandler} className='btn'>Logout</button>
+              )
+              :
+              (
+              <Link to={'/login'}>Login</Link> )
             }
 
         </article>

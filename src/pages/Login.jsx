@@ -31,20 +31,15 @@ const Login = () => {
         );
         toast.success(data.message)//messg from backend
         setIsAuthenticated(true);
-        setLoading(false)
-
+        setLoading(false);
         }catch(error){
             toast.error(error.response.data.message)//messg from backend
             // console.log("catch",error);
             setIsAuthenticated(false);
             setLoading(false)
-
         }
     };
     if(isAuthenticated) return <Navigate to={'/'}/>
-
-
-
 
 return (
     <div className='login'>

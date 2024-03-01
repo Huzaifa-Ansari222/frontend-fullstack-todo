@@ -12,21 +12,23 @@ import { server } from './main';
 // import './styles/app.scss'
 
 function App() {
-  const {setUser, setIsAuthenticated} = useContext(Context);  
+  const {setUser, setIsAuthenticated,setLoading} = useContext(Context);  
 
   useEffect(()=>{
-
+    setLoading(true)
     axios.get(`${server}/users/me`,{
       withCredentials: true, // for cookie
-    }).then(res=>{
+    }).then((res)=>{
       setUser(res.data.user);
       setIsAuthenticated(true)//user login
+      setLoading(false)
+
     }).catch((error)=>{
       setUser({})
       setIsAuthenticated(false)//user not login
+      setLoading(false)
     })
-
-  },[])
+  },[setIsAuthenticated, setLoading, setUser])
 
   return (
     <Router>

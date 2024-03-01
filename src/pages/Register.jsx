@@ -14,11 +14,10 @@ const Register = () => {
 
 
     const submitHandler = async(e) =>{
+        setLoading(true);
         e.preventDefault();
-        loading(true)
         // console.log(name,email,password);
         try{
-            //route of register from backend
         const {data} = await axios.post(`${server}/users/new`,
         {
             name,
@@ -40,8 +39,6 @@ const Register = () => {
             // console.log("catch",error);
             setIsAuthenticated(false);
             loading(false)
-
-
         }
     };
 
@@ -79,4 +76,4 @@ return (
 }
 
 export default Register
-//time 6:08 hr
+//time 6:27:40 hr
