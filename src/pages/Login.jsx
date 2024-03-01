@@ -7,12 +7,13 @@ import { Context, server } from '../main';
 
 const Login = () => {
 
-    const {isAuthenticated,setIsAuthenticated} = useContext(Context);
+    const {isAuthenticated,setIsAuthenticated,loading ,setLoading} = useContext(Context);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     
     const submitHandler = async(e) =>{
         e.preventDefault();
+        setLoading(true)
         // console.log(name,email,password);
         try{
             //route of register from backend
@@ -30,10 +31,14 @@ const Login = () => {
         );
         toast.success(data.message)//messg from backend
         setIsAuthenticated(true);
+        setLoading(false)
+
         }catch(error){
             toast.error(error.response.data.message)//messg from backend
-            console.log("catch",error);
+            // console.log("catch",error);
             setIsAuthenticated(false);
+            setLoading(false)
+
         }
     };
     if(isAuthenticated) return <Navigate to={'/'}/>
@@ -57,7 +62,7 @@ return (
                 value={password}
                 type='password' placeholder='@Password123'
                 />
-                <button type='submit'>Login</button>
+                <button disabled={loading} type='submit'>Login</button>
                 <p>------or------</p>
                 <Link to='/register'>Sign up</Link>
             </form>

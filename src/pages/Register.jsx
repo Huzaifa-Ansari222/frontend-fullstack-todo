@@ -9,12 +9,13 @@ const Register = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const {isAuthenticated,setIsAuthenticated} = useContext(Context);
+    const {isAuthenticated,setIsAuthenticated,loading ,setLoading} = useContext(Context);
 
 
 
     const submitHandler = async(e) =>{
         e.preventDefault();
+        loading(true)
         // console.log(name,email,password);
         try{
             //route of register from backend
@@ -33,10 +34,13 @@ const Register = () => {
         );
         toast.success(data.message)//messg from backend
         setIsAuthenticated(true);
+        loading(false)
         }catch(error){
             toast.error(error.response.data.message)//messg from backend
-            console.log("catch",error);
+            // console.log("catch",error);
             setIsAuthenticated(false);
+            loading(false)
+
 
         }
     };
