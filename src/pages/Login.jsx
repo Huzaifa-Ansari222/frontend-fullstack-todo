@@ -46,15 +46,15 @@ return (
         <section>
             <form onSubmit={submitHandler}>
                 <input 
-                onChange={(e)=> setEmail(e.target.value)}
                 required
                 value={email}
+                onChange={(e)=> setEmail(e.target.value)}
                 type='email' placeholder='example@email.com'
                 />
                 <input 
+                value={password}
                 onChange={(e)=> setPassword(e.target.value)}
                 required
-                value={password}
                 type='password' placeholder='@Password123'
                 />
                 <button disabled={loading} type='submit'>Login</button>

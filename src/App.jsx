@@ -22,13 +22,13 @@ function App() {
       setUser(res.data.user);
       setIsAuthenticated(true)//user login
       setLoading(false)
-
     }).catch((error)=>{
+      console.log(error);
       setUser({})
       setIsAuthenticated(false)//user not login
       setLoading(false)
     })
-  },[setIsAuthenticated, setLoading, setUser])
+  },[]);
 
   return (
     <Router>

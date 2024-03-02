@@ -19,12 +19,14 @@ const Header = () => {
     toast.success("Logout Successfully")//messg from backend
     setIsAuthenticated(false);
     setLoading(false);
-
     }catch(error){
         toast.error(error.response.data.message)//messg from backend
         setIsAuthenticated(false);// true on vid
         setLoading(false);
     }
+    // finally {
+    //   setLoading(false);
+    // }
 };
 
   return (

@@ -21,7 +21,7 @@ const [user,setUser]=useState({});
       loading,
       setLoading,
       user,
-      setUser
+      setUser,
     }}>
     <App />
     </Context.Provider>
