@@ -22,11 +22,12 @@ const [user,setUser]=useState({});
       setLoading,
       user,
       setUser,
-    }}>
+    }}
+    >
     <App />
     </Context.Provider>
-  )
-}
+  );
+};
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

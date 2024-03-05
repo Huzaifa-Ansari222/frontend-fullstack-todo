@@ -6,7 +6,7 @@ const TodoItem = ({
     isCompleted,
     updateHandler,
     deleteHandler,
-    id
+    id,
     }) => {
 return (
     <div className='todo'>
@@ -19,7 +19,7 @@ return (
         <button onClick={()=>deleteHandler(id)} className='btn'>Delete</button>
     </div>
     </div>
-)
+    )
 }
 
 export default TodoItem

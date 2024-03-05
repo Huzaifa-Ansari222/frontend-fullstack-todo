@@ -58,6 +58,8 @@ const Home = () => {
         },
       }
       );
+      setTitle("");
+      setDescription("");
       toast.success(data.message)
       setLoading(false)
       setRefresh(prev=>!prev)
@@ -68,17 +70,15 @@ const Home = () => {
   };
 
   useEffect(() => {
-
-
     axios.get(`${server}/task/my`,{
       withCredentials:true,
     }).then(res =>{
       // console.log(res.data.tasks);
       setTasks(res.data.tasks);
-    }).catch(e =>{
+    }).catch((e) =>{
       toast.error(e.response.data.message)
     })
-  },[refresh])
+  },[refresh]);
 
   if(!isAuthenticated) return <Navigate to={"/login"}/>
 

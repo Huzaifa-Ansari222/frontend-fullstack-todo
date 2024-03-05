@@ -9,7 +9,7 @@ const Header = () => {
   const {isAuthenticated,setIsAuthenticated, loading ,setLoading} = useContext(Context);
   // console.log(isAuthenticated);
 
-  const logoutHandler = async(e) =>{
+  const logoutHandler = async() =>{
     setLoading(true);
     try{
         //route of register from backend
@@ -21,20 +21,18 @@ const Header = () => {
     setLoading(false);
     }catch(error){
         toast.error(error.response.data.message)//messg from backend
-        setIsAuthenticated(false);// true on vid
+        setIsAuthenticated(true);// true on vid
         setLoading(false);
     }
-    // finally {
-    //   setLoading(false);
-    // }
 };
 
   return (
+    
     <nav className='header'>
-        <div>
+        <div className='left-nav'>
             <h2>Task Log</h2>
         </div>
-        <article>
+        <article className='right-nav'  >
             <Link to={'/'}>Home</Link>
             <Link to={'/profile'}>Profile</Link> 
             {
@@ -44,10 +42,9 @@ const Header = () => {
               (
               <Link to={'/login'}>Login</Link> )
             }
-
         </article>
     </nav>
   )
 }
 
-export default Header
+export default Header;

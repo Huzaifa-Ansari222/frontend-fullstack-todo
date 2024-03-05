@@ -1,7 +1,11 @@
 .login > section {
     @include container(900px, unset, 2rem);
     min-height: 80%;
-    background-color: $color2;
+    // background-color: red;
+    width: 100%;
+    // width: 200vw;
+
+
     > form {
       @include flexBox(column, center, flex-start, 2rem);
       @include inputs;

@@ -33,7 +33,7 @@ const Register = () => {
         );
         toast.success(data.message)//messg from backend
         setIsAuthenticated(true);
-        loading(false)
+        setLoading(false)
         }catch(error){
             toast.error(error.response.data.message)//messg from backend
             // console.log("catch",error);
@@ -68,7 +68,8 @@ return (
                 />
                 <button type='submit'>Sign up</button>
                 <p>------or------</p>
-                <Link to='/login'>Login</Link>
+                <Link className='mybtn2' to='/login' style={{border:"1px solid black",padding:"15px",paddingRight:"60px",paddingLeft:"60px"}}>
+                Login</Link>
             </form>
         </section>
     </div>

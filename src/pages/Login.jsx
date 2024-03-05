@@ -27,7 +27,7 @@ const Login = () => {
                 "Content-Type": "application/json", //by default
             },
             withCredentials: true, // for cookie
-        }
+            }
         );
         toast.success(data.message)//messg from backend
         setIsAuthenticated(true);
@@ -36,7 +36,7 @@ const Login = () => {
             toast.error(error.response.data.message)//messg from backend
             // console.log("catch",error);
             setIsAuthenticated(false);
-            setLoading(false)
+            setLoading(false);
         }
     };
     if(isAuthenticated) return <Navigate to={'/'}/>
@@ -59,7 +59,8 @@ return (
                 />
                 <button disabled={loading} type='submit'>Login</button>
                 <p>------or------</p>
-                <Link to='/register'>Sign up</Link>
+                <Link to='/register' className='mybtn2' style={{border:"1px solid black",padding:"15px",paddingRight:"60px",paddingLeft:"60px"}}
+                >Sign up</Link>
             </form>
         </section>
     </div>

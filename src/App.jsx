@@ -13,17 +13,16 @@ import { server } from './main';
 
 function App() {
   const {setUser, setIsAuthenticated,setLoading} = useContext(Context);  
-
   useEffect(()=>{
-    setLoading(true)
+    setLoading(true);
     axios.get(`${server}/users/me`,{
       withCredentials: true, // for cookie
     }).then((res)=>{
       setUser(res.data.user);
       setIsAuthenticated(true)//user login
       setLoading(false)
-    }).catch((error)=>{
-      console.log(error);
+    }).catch(()=>{
+      // console.log(error);
       setUser({})
       setIsAuthenticated(false)//user not login
       setLoading(false)
@@ -44,4 +43,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

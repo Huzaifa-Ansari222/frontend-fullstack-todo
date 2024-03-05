@@ -6,8 +6,12 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
+  // border: 1px dashed red;
 }
-
+body{
+  width: 100vw;
+  // background-color: blue;
+}
 @import "./feature.scss";
 @import "./header.scss";
 @import "./login.scss";
@@ -71,4 +75,8 @@ a {
   @include defaultStyle;
   padding: 5rem 2rem;
   background-color: $color4;
+}
+.mybtn2:hover{
+  background-color: rgb(51, 51, 51);
+  color: white;
 }
