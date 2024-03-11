@@ -1,42 +1,26 @@
-// .login > section {
-//     @include container(900px, unset, 2rem);
-//     min-height: 80%;
-//     background-color: $color2;
-//     > form {
-//       @include flexBox(column, center, flex-start, 2rem);
-//       @include inputs;
-  
-//       button {
-//         @include styledText(0.9rem);
-//         @include myButton(18.75rem, 1rem);
-//       }
-//     }
-//   }
-
-.login{
+.login {
   background-color: rgb(255, 255, 255);
-  height:50%;
-  width:40%;
-  margin:auto;
+  height: 50%;
+  width: 40%;
+  margin: auto;
   padding: 25px;
   box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.284);
-  border-radius:12px ;
+  border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
+
 .login section {
   width: 100%;
 }
-.login form{
+
+.login form {
   display: flex;
   flex-direction: column;
-  // gap: 0px;
   width: 100%;
   justify-content: center;
   align-items: center;
-  // height: 100vh ;
 }
 
 .login input {
@@ -44,7 +28,8 @@
   width: 95%;
   padding-left: 10px;
 }
-.login button{
+
+.login button {
   width: 23%;
   height: 40px;
   padding: 10px 20px;
@@ -58,27 +43,27 @@
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   border: none;
 }
+
 .login button:hover {
   background-color: #1751ff;
 }
-.btn{
+
+.btn {
   outline: 1px solid rgb(0, 0, 0);
   padding: 10px 40px 10px 40px;
   text-decoration: none;
   border-radius: 35px;
 }
-.btn:hover{
+
+.btn:hover {
   background-color: #0062ff;
   color: white;
   outline: none;
   text-decoration: underline;
 }
 
-
-@media  (max-width: 767px) {
-  .login{
-  // background-color:blue;
-  width: 70%;
-
+@media (max-width: 767px) {
+  .login {
+    width: 70%;
   }
-}
+}/*# sourceMappingURL=login.css.map */

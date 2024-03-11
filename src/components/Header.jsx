@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Context , server } from '../main'//auth isauth
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import "../styles/header.css"
 
 const Header = () => {
 
@@ -32,7 +33,7 @@ const Header = () => {
   return (
     <nav className='header'>
         <div>
-            <h2>Task Log</h2>
+            <span style={{fontSize:'40px', fontWeight:'bolder',fontFamily:'monospace'}}>Task Log</span>
         </div>
         <article>
             <Link to={'/'}>Home</Link>
