@@ -70,12 +70,7 @@ return (
                 />
                 <button type='submit'>Sign up</button>
                 <p>------or------</p>
-<<<<<<< HEAD
-                <Link className='mybtn2' to='/login' style={{border:"1px solid black",padding:"15px",paddingRight:"60px",paddingLeft:"60px"}}>
-                Login</Link>
-=======
                 <Link className='btn' to='/login'>Login</Link>
->>>>>>> style
             </form>
         </section>
     </div>

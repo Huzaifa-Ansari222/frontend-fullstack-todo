@@ -62,12 +62,7 @@ return (
                 />
                 <button disabled={loading} type='submit'>Login</button>
                 <p>------or------</p>
-<<<<<<< HEAD
-                <Link to='/register' className='mybtn2' style={{border:"1px solid black",padding:"15px",paddingRight:"60px",paddingLeft:"60px"}}
-                >Sign up</Link>
-=======
                 <Link className='btn' to='/register'>Sign up</Link>
->>>>>>> style
             </form>
         </section>
     </div>
