@@ -51,14 +51,14 @@ return (
                 required
                 value={email}
                 onChange={(e)=> setEmail(e.target.value)}
-                type='email' placeholder='Email'
+                type='email' placeholder='email1@gmail.com'
                 />
                 <input 
                 style={{marginTop:'30px',marginBottom:'30px'}}
                 value={password}
                 onChange={(e)=> setPassword(e.target.value)}
                 required
-                type='password' placeholder='Password'
+                type='password' placeholder='password1'
                 />
                 <button disabled={loading} type='submit'>Login</button>
                 <p>------or------</p>
