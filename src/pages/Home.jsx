@@ -59,6 +59,8 @@ const Home = () => {
         },
       }
       );
+      setTitle("");
+      setDescription("");
       toast.success(data.message)
       setLoading(false)
       setRefresh(prev=>!prev)
