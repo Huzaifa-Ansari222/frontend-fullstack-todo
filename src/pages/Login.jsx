@@ -3,6 +3,7 @@ import { Link, Navigate } from 'react-router-dom'
 import toast from 'react-hot-toast';
 import axios from 'axios';
 import { Context, server } from '../main';
+import "../styles/login.css"
 
 
 const Login = () => {
@@ -42,25 +43,31 @@ const Login = () => {
     if(isAuthenticated) return <Navigate to={'/'}/>
 
 return (
-    <div className='login'>
+
+    <div className='login' >
         <section>
             <form onSubmit={submitHandler}>
                 <input 
                 required
                 value={email}
                 onChange={(e)=> setEmail(e.target.value)}
-                type='email' placeholder='example@email.com'
+                type='email' placeholder='Email'
                 />
                 <input 
+                style={{marginTop:'30px',marginBottom:'30px'}}
                 value={password}
                 onChange={(e)=> setPassword(e.target.value)}
                 required
-                type='password' placeholder='@Password123'
+                type='password' placeholder='Password'
                 />
                 <button disabled={loading} type='submit'>Login</button>
                 <p>------or------</p>
+<<<<<<< HEAD
                 <Link to='/register' className='mybtn2' style={{border:"1px solid black",padding:"15px",paddingRight:"60px",paddingLeft:"60px"}}
                 >Sign up</Link>
+=======
+                <Link className='btn' to='/register'>Sign up</Link>
+>>>>>>> style
             </form>
         </section>
     </div>

@@ -22,9 +22,15 @@ const [user,setUser]=useState({});
       setLoading,
       user,
       setUser,
+<<<<<<< HEAD
     }}
     >
+=======
+    }}>
+    <div style={{height:'100vh' ,display:'flex',flexDirection:'column'}}>
+>>>>>>> style
     <App />
+    </div>
     </Context.Provider>
   );
 };

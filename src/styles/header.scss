@@ -1,28 +1,74 @@
-.header {
-    background-color: $color3;
+// .header {
+//     background-color: $color3;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding: 0 3rem;
+//     width: 100%;
+//     > div {
+//       h2 {
+//         // text-transform: uppercase;
+//         color: $color2;
+//         font-weight: 500;
+//       }
+//     }
+  
+//     > article {
+//       display: flex;
+//       align-items: center;
+//       text-align: center;
+//       > a {
+//         @include styledText;
+//         @include myButton;
+//       }
+//     }
+//   }
+
+
+.header{
+    height: 60px;
+    background-color: #181818;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 3rem;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: fixed;
     width: 100%;
-    // width: 100vw;
-    > div {
-      h2 {
-        // text-transform: uppercase;
-        color: $color2;
-        font-weight: 500;
-      }
+}
+.navv{
+    // width: 40%;
+    gap: 30px;
+    display: flex;
+    height: 80%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+}
+.navv div{
+    color: white;
+    
+}
+.titles{
+    font-size: 40px;
+    color: white;
+    
+    
+}
+@media  (max-width: 767px) {
+    .header{
+        padding-left: 10px;
+        padding-right: 10px;
     }
-  
-    > article {
-      
-      display: flex;
-      align-items: center;
-      text-align: center;
-      > a {
-        @include styledText;
-        @include myButton;
-      }
+    .titles{
+        
+        font-size: 15px;
+        color: white;
     }
-
-  }
+    #btn-to{
+        padding: 4px 6px 4px 6px;
+    }
+    
+    
+}

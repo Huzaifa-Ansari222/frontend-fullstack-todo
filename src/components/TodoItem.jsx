@@ -10,14 +10,17 @@ const TodoItem = ({
     }) => {
 return (
     <div className='todo'>
-    <div>
-        <h4>{title}</h4>
-        <p>{description}</p>
-    </div>
-    <div>
-        <input onChange={()=>updateHandler(id)} type="checkbox" checked={isCompleted} />
-        <button onClick={()=>deleteHandler(id)} className='btn'>Delete</button>
-    </div>
+        <div>
+            <h4>{title}</h4>
+            <p>{description}</p>
+        </div>
+        <div className='rightBtn'>
+            <input onChange={()=>updateHandler(id)}
+            style={{transform: 'scale(1.5)',marginRight:'10px'}}
+            type="checkbox" checked={isCompleted} />
+            <button style={{padding:'10px',border:'none',backgroundColor:'rgb(199 0 0 / 38%)'}}
+            onClick={()=>deleteHandler(id)} className='btn'>Delete</button>
+        </div>
     </div>
     )
 }

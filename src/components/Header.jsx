@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Context , server } from '../main'//auth isauth
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import "../styles/header.css"
 
 const Header = () => {
 
@@ -29,18 +30,18 @@ const Header = () => {
   return (
     
     <nav className='header'>
-        <div className='left-nav'>
-            <h2>Task Log</h2>
+        <div>
+            <span className='titles' style={{fontWeight:'bolder',fontFamily:'monospace'}}>Task Log</span>
         </div>
-        <article className='right-nav'  >
-            <Link to={'/'}>Home</Link>
-            <Link to={'/profile'}>Profile</Link> 
+        <article className='navv'>
+            <Link style={{textDecoration:'none'}} to={'/'}><div>Home</div></Link>
+            <Link style={{textDecoration:'none'}} to={'/profile'}><div>Profile</div></Link> 
             {
-              isAuthenticated ? ( <button disabled={loading} onClick={logoutHandler} className='btn'>Logout</button>
+              isAuthenticated ? ( <button id='btn-to' disabled={loading} onClick={logoutHandler} className='btn'><span >Logout</span></button>
               )
               :
               (
-              <Link to={'/login'}>Login</Link> )
+              <Link style={{textDecoration:'none'}} id='btn-to' to={'/login'}><div >Login</div></Link> )
             }
         </article>
     </nav>

@@ -52,24 +52,30 @@ return (
                 required
                 value={name} 
                 type='text'
-                placeholder='Enter your name'
+                placeholder='Username'
                 />
                 <input 
+                style={{marginTop:'30px'}}
                 onChange={(e)=> setEmail(e.target.value)}
                 required
                 value={email} 
-                type='email' placeholder='example@email.com'
+                type='email' placeholder='Email'
                 />
                 <input 
+                style={{marginTop:'30px',marginBottom:'30px'}}
                 onChange={(e)=> setPassword(e.target.value)}
                 required
                 value={password}
-                type='password' placeholder='@Password123'
+                type='password' placeholder='Password'
                 />
                 <button type='submit'>Sign up</button>
                 <p>------or------</p>
+<<<<<<< HEAD
                 <Link className='mybtn2' to='/login' style={{border:"1px solid black",padding:"15px",paddingRight:"60px",paddingLeft:"60px"}}>
                 Login</Link>
+=======
+                <Link className='btn' to='/login'>Login</Link>
+>>>>>>> style
             </form>
         </section>
     </div>
