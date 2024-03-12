@@ -1,6 +1,7 @@
 .login {
+  outline: 2px rgba(194, 194, 194, 0.556) solid;
   background-color: rgb(255, 255, 255);
-  height: 50%;
+  height: 60%;
   width: 40%;
   margin: auto;
   padding: 25px;
@@ -30,22 +31,23 @@
 }
 
 .login button {
-  width: 23%;
   height: 40px;
-  padding: 10px 20px;
+  padding: 10px 45px 10px 45px;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
   color: #ffffff;
-  background-color: #0062ff;
+  background-color: #181818;
   border-radius: 35px;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   border: none;
 }
 
 .login button:hover {
-  background-color: #1751ff;
+  background-color: rgb(255, 255, 255);
+  outline: 1px solid rgb(0, 0, 0);
+  color: black;
 }
 
 .btn {
@@ -53,10 +55,11 @@
   padding: 10px 40px 10px 40px;
   text-decoration: none;
   border-radius: 35px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .btn:hover {
-  background-color: #0062ff;
+  background-color: #181818;
   color: white;
   outline: none;
   text-decoration: underline;

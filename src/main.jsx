@@ -23,7 +23,9 @@ const [user,setUser]=useState({});
       user,
       setUser,
     }}>
+    <div style={{height:'100vh' ,display:'flex',flexDirection:'column'}}>
     <App />
+    </div>
     </Context.Provider>
   )
 }

@@ -4,6 +4,7 @@ import { Context, server } from '../main'
 import toast from 'react-hot-toast'
 import TodoItem from '../components/TodoItem'
 import { Navigate } from 'react-router-dom'
+import "../styles/home.css"
 
 const Home = () => {
 
@@ -84,7 +85,7 @@ const Home = () => {
 
   return (
     <div className='container'>
-          <div className='login'>
+      <div className='login' id='taskk'>
         <section>
             <form onSubmit={submitHandler}>
                 <input 

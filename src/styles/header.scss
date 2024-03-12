@@ -26,5 +26,49 @@
 
 
 .header{
-    background-color: red;
+    height: 60px;
+    background-color: #181818;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: fixed;
+    width: 100%;
+}
+.navv{
+    // width: 40%;
+    gap: 30px;
+    display: flex;
+    height: 80%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+}
+.navv div{
+    color: white;
+    
+}
+.titles{
+    font-size: 40px;
+    color: white;
+    
+    
+}
+@media  (max-width: 767px) {
+    .header{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .titles{
+        
+        font-size: 15px;
+        color: white;
+    }
+    #btn-to{
+        padding: 4px 6px 4px 6px;
+    }
+    
+    
 }
