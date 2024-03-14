@@ -84,7 +84,7 @@ const Home = () => {
   if(!isAuthenticated) return <Navigate to={"/login"}/>
 
   return (
-    <div className='container'>
+    <div style={{backgroundColor:'#ffffff'}} className='container'>
       <div className='login' id='taskk'>
         <section>
             <form onSubmit={submitHandler}>
@@ -106,7 +106,7 @@ const Home = () => {
             </form>
         </section>
     </div>
-      <section className="todosContainer">
+      <section style={{backgroundColor:'#ffffff'}} className="todosContainer">
         {
           tasks.map((i)=>(
             <TodoItem  title={i.title}
