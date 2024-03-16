@@ -29,7 +29,7 @@ const Header = () => {
 
   return (
     
-    <nav className='header'>
+    <nav className='header' >
         <div>
             <span className='titles' style={{fontWeight:'bolder',fontFamily:'monospace'}}>Task Log</span>
         </div>
