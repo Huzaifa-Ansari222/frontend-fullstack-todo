@@ -10,9 +10,9 @@ const TodoItem = ({
     }) => {
 return (
     <div className='todo'>
-        <div>
+        <div style={{width:'65%'}}>
             <h4>{title}</h4>
-            <p>{description}</p>
+            <p style={{wordWrap:'break-word'}}>{description}</p>
         </div>
         <div className='rightBtn'>
             <input onChange={()=>updateHandler(id)}
