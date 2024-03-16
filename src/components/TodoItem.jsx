@@ -18,7 +18,7 @@ return (
             <input onChange={()=>updateHandler(id)}
             style={{transform: 'scale(1.5)',marginRight:'10px'}}
             type="checkbox" checked={isCompleted} />
-            <button style={{padding:'10px',border:'none',backgroundColor:'rgb(199 0 0 / 38%)'}}
+            <button style={{padding:'10px',border:'1px solid red',backgroundColor:'rgb(199 0 0 / 38%)'}}
             onClick={()=>deleteHandler(id)} className='btn'>Delete</button>
         </div>
     </div>

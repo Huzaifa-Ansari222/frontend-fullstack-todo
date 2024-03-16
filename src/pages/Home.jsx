@@ -106,7 +106,7 @@ const Home = () => {
             </form>
         </section>
     </div>
-      <section style={{backgroundColor:'#e8e8e8'}} className="todosContainer">
+      <section style={{backgroundColor:'#e8e8e8',width:'auto'}} className="todosContainer">
         {
           tasks.map((i)=>(
             <TodoItem style={{backgroundColor:'white',outline:'1px solid gray'}} title={i.title}
